@@ -32,6 +32,7 @@ body {
     max-width: 1200px;
     height: 100%;
     margin: auto;
+    overflow: hidden;
 }
 
 .bg-primary {
@@ -96,22 +97,6 @@ body {
     font-weight: 300;
 }
 
-
-/* NAVBAR */
-/* 
-#navbar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color: var(--primary-color);
-}
-
-#navbar a {
-    text-decoration: none;
-    color: var(--color-light);
-} */
-
 /* SHOWCASE */
 
 #showcase {
@@ -167,7 +152,6 @@ body {
 /* BENEFITS */
 #benefits {
     color: var(--color-dark);
-
 }
 
 #benefits h2 {
@@ -176,6 +160,15 @@ body {
 
 #benefits p {
     text-align: justify;
+}
+
+#benefits p a {
+    text-decoration: none;
+}
+
+#benefits p a:focus {
+    outline: 1px solid var(--primary-color);
+    outline-offset: 3px;
 }
 
 /* SERVICES */
@@ -266,8 +259,27 @@ body {
     font-family: 'Barlow', sans-serif;
 }
 
+#contact .contact-content .contact-form form input:not(.btn):focus,
+#contact .contact-content .contact-form form textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
 #contact .contact-content .contact-form form textarea {
     padding-bottom: 4rem;
+}
+
+#contact .contact-content .contact-form form .btn:focus {
+    box-shadow: /* Cria borda de foco */
+        0 0 0 3px var(--color-light),
+        0 0 0 5px var(--primary-color);
+    border: none;
+    outline: none;
+}
+
+/* Tira outline do mozilla */
+::-moz-focus-inner {
+    border: none;
 }
 
 #contact .contact-content .store {
@@ -276,3 +288,80 @@ body {
     background: url(/img/loja.jpg) no-repeat center center/cover;
     border-radius: 5px;
 }
+
+/* Media queries */
+
+@media (max-width: 800px) {
+
+    /* Services */
+    #services .items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* Contact */
+    #contact .contact-content {
+        flex-direction: column-reverse;
+    }
+
+    #contact .contact-content .contact-form,
+    #contact .contact-content .store {
+        flex: none;
+    }
+
+    #contact .contact-content .store {
+        height: 500px;
+        margin: 0 1.5rem;
+    }
+
+    #contact .contact-content .contact-form {
+        text-align: center;
+    }
+}
+
+@media (max-width: 500px) {
+
+    /* Utilities */
+    .l-heading {
+        font-size: 4rem;
+    }
+
+    .l-paragraph {
+        font-size: 2rem;
+    }
+
+    .m-paragraph {
+        font-size: 1.2rem;
+    }
+
+    /* Services */
+    #services .items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #services .items .item i {
+        font-size: 2rem;
+    }
+
+    #services .items .item p {
+        font-size: 1rem;
+    }
+
+
+    /* Contact */
+
+    #contact .contact-content .store {
+        height: 350px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
