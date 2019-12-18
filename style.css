@@ -138,6 +138,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100%;
 }
 
 #phones .items .item {
@@ -327,7 +328,7 @@ body {
     }
 
     #phones {
-        height: 30vh;
+        height: 25vh;
     }
 
 
@@ -345,10 +346,6 @@ body {
     }
 
     /* Services */
-    #services .items {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
     #services .items .item i {
         font-size: 2rem;
     }
