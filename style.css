@@ -321,6 +321,16 @@ body {
 
 @media (max-width: 500px) {
 
+    /* Showcase */
+    #showcase {
+        height: 60vh;
+    }
+
+    #phones {
+        height: 30vh;
+    }
+
+
     /* Utilities */
     .l-heading {
         font-size: 4rem;
