@@ -126,7 +126,7 @@ body {
     height: 100%;
     width: 100%;
     z-index: -1;
-    background: url(/img/chave-1.jpg) no-repeat center center/cover;
+    background: url(img/chave-1.jpg) no-repeat center center/cover;
 }
 
 #showcase .showcase-content {
@@ -201,7 +201,7 @@ body {
     height: 100%;
     width: 100%;
     z-index: -1;
-    background: url(/img/chave-4.jpg) no-repeat center center/cover;
+    background: url(img/chave-4.jpg) no-repeat center center/cover;
     background-attachment: fixed;
 }
 
@@ -299,7 +299,7 @@ body {
 #contact .contact-content .store {
     height: 600px;
     flex: 1;
-    background: url(/img/loja.jpg) no-repeat center center/cover;
+    background: url(img/loja.jpg) no-repeat center center/cover;
     border-radius: 5px;
 }
 
